@@ -26,7 +26,7 @@ class ChestXrayDataSet(Dataset):
                 items = line.split()
                 image_name= items[0]
                 label = items[1:]
-                label = [int(i) for i in label]
+                label = [float (i) for i in label]
                 image_name = os.path.join(data_dir, image_name)
                 image_names.append(image_name)
                 labels.append(label)
